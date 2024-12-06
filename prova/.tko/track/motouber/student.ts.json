@@ -1,0 +1,576 @@
+{
+    "patches": [
+        {
+            "label": "2024-12-05_16-47-41",
+            "content": "@@ -1450,65 +1450,8 @@\n    %7D\n-%0A    getCusto(): number%7B%0A        return this.custo;%0A    %7D\n %0A%0A  \n@@ -2261,138 +2261,8 @@\n d %7B%0A\n-        console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver: $%7Bthis.moto.getMotorista()%7D, Passager $%7Bthis.moto.getPassageiro()%7D%60);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_16-51-39",
+            "content": "@@ -2318,586 +2318,8 @@\n d %7B%0A\n-        if(this.moto.getMotorista() == null && this.moto.getPassageiro() == null)%7B%0A            console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver: None, Passager: None%60);%0A            return;%0A        %7D%0A        if(this.moto.getMotorista() == null)%7B%0A            console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver: None, Passager: $%7Bthis.moto.getPassageiro()%7D%60);%0A            return;%0A        %7D%0A        if(this.moto.getPassageiro() == null)%7B%0A            console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver:  $%7Bthis.moto.getMotorista()%7D, Passager: None%60);%0A            return;%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_16-56-32",
+            "content": "@@ -2695,32 +2695,221 @@\n turn;%0A        %7D%0A\n+        if(this.moto.getPassageiro() == null)%7B%0A            console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver:  $%7Bthis.moto.getMotorista()%7D, Passager: None%60);%0A            return;%0A        %7D%0A\n         console.\n"
+        },
+        {
+            "label": "2024-12-05_16-56-46",
+            "content": "@@ -2796,18 +2796,17 @@\n )%7D, Pass\n-en\n+a\n ger $%7Bth\n"
+        },
+        {
+            "label": "2024-12-05_16-57-12",
+            "content": "@@ -2467,26 +2467,25 @@\n : None, Pass\n-en\n+a\n ger: None%60);\n@@ -2635,18 +2635,17 @@\n ne, Pass\n-en\n+a\n ger: $%7Bt\n"
+        },
+        {
+            "label": "2024-12-05_16-57-26",
+            "content": "@@ -2352,16 +2352,53 @@\n sta() ==\n+ null && this.moto.getPassageiro() ==\n  null)%7B%0A\n@@ -2508,32 +2508,221 @@\n turn;%0A        %7D%0A\n+        if(this.moto.getMotorista() == null)%7B%0A            console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver: None, Passenger: $%7Bthis.moto.getPassageiro()%7D%60);%0A            return;%0A        %7D%0A\n         console.\n"
+        },
+        {
+            "label": "2024-12-05_16-59-52",
+            "content": "@@ -1066,25 +1066,25 @@\n is.motorista\n-?\n+!\n .setNome(nom\n@@ -1110,17 +1110,17 @@\n otorista\n-?\n+!\n .setDinh\n@@ -1225,25 +1225,25 @@\n s.passageiro\n-?\n+!\n .setNome(nom\n@@ -1269,17 +1269,17 @@\n ssageiro\n-?\n+!\n .setDinh\n"
+        },
+        {
+            "label": "2024-12-05_17-01-00",
+            "content": "@@ -481,16 +481,23 @@\n : number\n+ %7C null\n ;%0A%0A    c\n@@ -695,32 +695,39 @@\n ro(value: number\n+ %7C null\n )%7B%0A        this.\n@@ -753,133 +753,8 @@\n    %7D\n-%0A    getNome(): string %7C null%7B%0A        return this.nome;%0A    %7D%0A    getDinheiro(): number%7B%0A        return this.dinheiro;%0A    %7D\n %0A%0A%7D%0A\n@@ -1030,32 +1030,39 @@\n dinheiro: number\n+ %7C null\n )%7B%0A        this.\n@@ -1188,32 +1188,39 @@\n dinheiro: number\n+ %7C null\n )%7B%0A        this.\n@@ -1546,138 +1546,8 @@\n id%7B%0A\n-        if(this.passageiro?.getDinheiro() == 0)%7B%0A            console.log(%22fail: Passenger does not have enough money%22);%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_17-09-47",
+            "content": "@@ -1817,18 +1817,16 @@\n         \n-//\n console.\n@@ -1942,18 +1942,16 @@\n         \n-//\n  console\n"
+        },
+        {
+            "label": "2024-12-05_17-11-35",
+            "content": "@@ -2585,9 +2585,9 @@\n a() \n-!\n+=\n = nu\n"
+        },
+        {
+            "label": "2024-12-05_17-13-53",
+            "content": "@@ -2581,17 +2581,17 @@\n rista() \n-=\n+!\n = null)%7B\n"
+        },
+        {
+            "label": "2024-12-05_17-14-56",
+            "content": "@@ -1025,16 +1025,79 @@\n to = 0;%0A\n+        this.motorista = null;%0A        this.passageiro = null;%0A\n     %7D%0A%0A \n"
+        },
+        {
+            "label": "2024-12-05_17-15-31",
+            "content": "@@ -2522,9 +2522,9 @@\n a() \n-!\n+=\n = nu\n"
+        },
+        {
+            "label": "2024-12-05_17-15-54",
+            "content": "@@ -1029,71 +1029,8 @@\n  0;%0A\n-        this.motorista = null;%0A        this.passageiro = null;%0A\n     \n@@ -2518,17 +2518,17 @@\n rista() \n-=\n+!\n = null)%7B\n"
+        },
+        {
+            "label": "2024-12-05_17-16-12",
+            "content": "@@ -3671,26 +3671,8 @@\n %0A%7D%0A%0A\n-export %7BAdapter%7D;%0A\n main\n"
+        },
+        {
+            "label": "2024-12-05_17-18-52",
+            "content": "@@ -2850,16 +2850,39 @@\n    %7D%0A%7D%0A%0A\n+function main(): void %7B\n %0A    let\n@@ -3663,16 +3663,18 @@\n  %7D%0A    %7D\n+%0A%7D\n %0A%0Aexport\n@@ -3685,18 +3685,16 @@\n apter%7D;%0A\n-//\n main();%0A\n"
+        },
+        {
+            "label": "2024-12-05_17-19-32",
+            "content": "@@ -2854,42 +2854,13 @@\n %0A%7D%0A%0A\n-// function main(): void %7B%0A//\n+%0A\n     \n- \n let \n@@ -2889,27 +2889,24 @@\n  Adapter();%0A\n-// \n     while (t\n@@ -2912,19 +2912,16 @@\n true) %7B%0A\n-// \n         \n@@ -2936,26 +2936,24 @@\n %22, %22%22);%0A\n-//\n         \n  const l\n@@ -2940,25 +2940,24 @@\n %22);%0A        \n- \n const line =\n@@ -2966,19 +2966,16 @@\n nput();%0A\n-// \n         \n@@ -3004,19 +3004,16 @@\n t(%22 %22);%0A\n-// \n         \n@@ -3026,26 +3026,24 @@\n line);%0A%0A\n-//\n         \n  if     \n@@ -3034,17 +3034,16 @@\n         \n- \n if      \n@@ -3105,35 +3105,32 @@\n               %7D%0A\n-// \n         else if \n@@ -3196,27 +3196,24 @@\n s%5B2%5D);    %7D%0A\n-// \n         else\n@@ -3287,26 +3287,24 @@\n %5B2%5D); %7D%0A\n-//\n         \n  else if\n@@ -3287,33 +3287,32 @@\n %5B2%5D); %7D%0A        \n- \n else if (args%5B0%5D\n@@ -3366,35 +3366,32 @@\n               %7D%0A\n-// \n         else if \n@@ -3453,35 +3453,32 @@\n               %7D%0A\n-// \n         else if \n@@ -3552,18 +3552,16 @@\n   %7D%0A\n-//\n         \n  els\n@@ -3552,25 +3552,24 @@\n   %7D%0A        \n- \n else        \n@@ -3639,19 +3639,11 @@\n   %7D%0A\n-//\n    \n-  %7D%0A//\n  %7D%0A%0A\n@@ -3662,17 +3662,16 @@\n ter%7D;%0A//\n- \n main();%0A\n"
+        },
+        {
+            "label": "2024-12-05_17-19-47",
+            "content": "@@ -2854,26 +2854,11 @@\n %0A%7D%0A%0A\n-export %7BAdapter%7D;%0A\n+// \n func\n@@ -2873,24 +2873,27 @@\n n(): void %7B%0A\n+// \n     let adap\n@@ -2918,24 +2918,27 @@\n  Adapter();%0A\n+// \n     while (t\n@@ -2944,16 +2944,19 @@\n true) %7B%0A\n+// \n         \n@@ -2967,24 +2967,27 @@\n e(%22$%22, %22%22);%0A\n+// \n         cons\n@@ -3004,24 +3004,26 @@\n nput();%0A\n+//\n         \n const ar\n@@ -3010,24 +3010,25 @@\n ;%0A//        \n+ \n const args =\n@@ -3041,24 +3041,27 @@\n split(%22 %22);%0A\n+// \n         writ\n@@ -3070,24 +3070,26 @@\n line);%0A%0A\n+//\n         \n if      \n@@ -3080,16 +3080,17 @@\n         \n+ \n if      \n@@ -3152,32 +3152,35 @@\n               %7D%0A\n+// \n         else if \n@@ -3246,24 +3246,27 @@\n s%5B2%5D);    %7D%0A\n+// \n         else\n@@ -3340,16 +3340,19 @@\n %5B2%5D); %7D%0A\n+// \n         \n@@ -3422,32 +3422,35 @@\n               %7D%0A\n+// \n         else if \n@@ -3512,32 +3512,35 @@\n               %7D%0A\n+// \n         else if \n@@ -3602,32 +3602,35 @@\n               %7D%0A\n+// \n         else    \n@@ -3704,23 +3704,44 @@\n   %7D%0A\n+// \n     %7D%0A\n-    %0A%7D%0A%0A%0A\n+// %7D%0A%0Aexport %7BAdapter%7D;%0A// \n main\n"
+        },
+        {
+            "label": "2024-12-05_17-20-59",
+            "content": "@@ -2850,16 +2850,34 @@\n    %7D%0A%7D%0A%0A\n+export %7BAdapter%7D;%0A\n function\n@@ -3690,33 +3690,16 @@\n     %0A%7D%0A%0A\n-export %7BAdapter%7D;\n %0Amain();\n"
+        },
+        {
+            "label": "2024-12-05_17-25-07",
+            "content": "@@ -1178,9 +1178,9 @@\n ista\n-!\n+?\n .set\n"
+        },
+        {
+            "label": "2024-12-05_17-28-41",
+            "content": "@@ -1210,25 +1210,25 @@\n is.motorista\n-!\n+?\n .setDinheiro\n@@ -1322,25 +1322,25 @@\n s.passageiro\n-!\n+?\n .setNome(nom\n@@ -1366,17 +1366,17 @@\n ssageiro\n-!\n+?\n .setDinh\n"
+        },
+        {
+            "label": "2024-12-05_17-29-05",
+            "content": "@@ -1170,25 +1170,25 @@\n is.motorista\n-?\n+!\n .setNome(nom\n@@ -1214,17 +1214,17 @@\n otorista\n-?\n+!\n .setDinh\n@@ -1322,25 +1322,25 @@\n s.passageiro\n-?\n+!\n .setNome(nom\n@@ -1366,17 +1366,17 @@\n ssageiro\n-?\n+!\n .setDinh\n"
+        },
+        {
+            "label": "2024-12-05_17-29-22",
+            "content": "@@ -444,16 +444,23 @@\n : string\n+ %7C null\n ;%0A    pr\n@@ -624,16 +624,23 @@\n : string\n+ %7C null\n )%7B%0A     \n@@ -757,16 +757,23 @@\n : string\n+ %7C null\n %7B%0A      \n"
+        },
+        {
+            "label": "2024-12-05_17-30-46",
+            "content": "@@ -444,23 +444,16 @@\n : string\n- %7C null\n ;%0A    pr\n@@ -617,23 +617,16 @@\n : string\n- %7C null\n )%7B%0A     \n@@ -743,23 +743,16 @@\n : string\n- %7C null\n %7B%0A      \n"
+        },
+        {
+            "label": "2024-12-05_17-31-01",
+            "content": "@@ -504,39 +504,32 @@\n tor(nome: string\n- %7C null\n , dinheiro: numb\n"
+        },
+        {
+            "label": "2024-12-05_17-33-54",
+            "content": "@@ -444,18 +444,25 @@\n : string\n+ %7C null\n ;%0A\n-\n     priv\n@@ -504,32 +504,39 @@\n tor(nome: string\n+ %7C null\n , dinheiro: numb\n@@ -631,16 +631,23 @@\n : string\n+ %7C null\n )%7B%0A     \n@@ -764,16 +764,23 @@\n : string\n+ %7C null\n %7B%0A      \n@@ -1123,32 +1123,39 @@\n sta(nome: string\n+ %7C null\n , dinheiro: numb\n@@ -1248,24 +1248,24 @@\n iro);%0A    %7D%0A\n-\n     setPassa\n@@ -1274,32 +1274,39 @@\n iro(nome: string\n+ %7C null\n , dinheiro: numb\n"
+        },
+        {
+            "label": "2024-12-05_17-37-25",
+            "content": "@@ -1366,70 +1366,8 @@\n   %7D%0A\n-    setCusto(custo: number)%7B%0A        this.custo = custo;%0A    %7D\n %0A   \n@@ -2434,16 +2434,13 @@\n oto.\n-setCusto\n+drive\n (dis\n"
+        },
+        {
+            "label": "2024-12-05_17-39-40",
+            "content": "@@ -1150,28 +1150,62 @@\n ista\n- = new Pessoa(nome, \n+?.setNome(nome); %0A        this.motorista?.setDinheiro(\n dinh\n"
+        },
+        {
+            "label": "2024-12-05_17-41-15",
+            "content": "@@ -1257,36 +1257,70 @@\n ssageiro\n- = new Pessoa(nome, \n+?.setNome(nome);%0A        this.passageiro?.setDinheiro(\n dinheiro\n"
+        },
+        {
+            "label": "2024-12-05_17-41-38",
+            "content": "@@ -1150,62 +1150,28 @@\n ista\n-?.setNome(nome); %0A        this.motorista?.setDinheiro(\n+ = new Pessoa(nome, \n dinh\n@@ -1261,62 +1261,28 @@\n eiro\n-?.setNome(nome);%0A        this.passageiro?.setDinheiro(\n+ = new Pessoa(nome, \n dinh\n@@ -2092,28 +2092,8 @@\n oto;\n-%0A    pessoa: Pessoa;\n %0A%0A  \n@@ -2106,30 +2106,16 @@\n tructor(\n-nome, dinheiro\n )%7B%0A     \n@@ -2145,58 +2145,8 @@\n ();%0A\n-        this.pessoa = new Pessoa(nome, dinheiro);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_17-44-03",
+            "content": "@@ -1146,36 +1146,70 @@\n otorista\n- = new Pessoa(nome, \n+?.setNome(nome); %0A        this.motorista?.setDinheiro(\n dinheiro\n"
+        },
+        {
+            "label": "2024-12-05_17-44-22",
+            "content": "@@ -1150,62 +1150,28 @@\n ista\n-?.setNome(nome); %0A        this.motorista?.setDinheiro(\n+ = new Pessoa(nome, \n dinh\n@@ -2089,308 +2089,8 @@\n  %7D%0A%0A\n-    toString(): void %7B%0A        if(this.getMotorista() == null)%7B%0A            console.log(%60Cost: $%7Bthis.getCusto()%7D, Driver: None, Passenger: None%60);%0A            return;%0A        %7D%0A        console.log(%60Cost: $%7Bthis.getCusto()%7D, Driver: $%7Bthis.getMotorista()%7D, Passenger $%7Bthis.getPassageiro()%7D%60);%0A    %7D%0A\n %7D%0A%0A%0A\n"
+        },
+        {
+            "label": "2024-12-05_17-47-08",
+            "content": "@@ -2123,23 +2123,24 @@\n  %7D%0A%0A    \n-mostrar\n+toString\n (): void\n@@ -2951,32 +2951,82 @@\n  show(): void %7B%0A\n+        if(this.moto.getMotorista() == null)%7B%0A    \n         console.\n@@ -3029,16 +3029,25 @@\n ole.log(\n+%60Cost: $%7B\n this.mot\n@@ -3052,19 +3052,220 @@\n oto.\n-mostrar());\n+getCusto()%7D, Driver: None, Passenger: None%60);%0A            return;%0A        %7D%0A        console.log(%60Cost: $%7Bthis.moto.getCusto()%7D, Driver: $%7Bthis.moto.getMotorista()%7D, Passenger $%7Bthis.moto.getPassageiro()%7D%60);%0A    %7D\n %0A%7D%0A%0A\n"
+        },
+        {
+            "label": "2024-12-05_17-47-51",
+            "content": "@@ -2485,32 +2485,46 @@\n     constructor(\n+nome, dinheiro\n )%7B%0A        this.\n@@ -2538,24 +2538,74 @@\n new Moto();%0A\n+        this.pessoa = new Pessoa(nome, dinheiro);%0A\n     %7D%0A    se\n"
+        },
+        {
+            "label": "2024-12-05_17-48-45",
+            "content": "@@ -2936,22 +2936,16 @@\n rar());%0A\n-    %7D%0A\n %7D%0A%0Afunct\n"
+        },
+        {
+            "label": "2024-12-05_17-49-01",
+            "content": "@@ -2497,74 +2497,10 @@\n tor(\n-nome, dinheiro)%7B%0A        this.pessoa = new Pessoa(nome, dinheiro);\n+)%7B\n %0A   \n"
+        },
+        {
+            "label": "2024-12-05_17-49-55",
+            "content": "@@ -2485,34 +2485,98 @@\n     constructor(\n-)%7B\n+nome, dinheiro)%7B%0A        this.pessoa = new Pessoa(nome, dinheiro);\n %0A        this.mo\n"
+        },
+        {
+            "label": "2024-12-05_17-50-40",
+            "content": "@@ -2123,24 +2123,23 @@\n  %7D%0A%0A    \n-toString\n+mostrar\n (): void\n@@ -2924,24 +2924,23 @@\n is.moto.\n-toString\n+mostrar\n ());%0A   \n"
+        },
+        {
+            "label": "2024-12-05_17-51-01",
+            "content": "@@ -2135,22 +2135,20 @@\n ring(): \n-string\n+void\n  %7B%0A     \n@@ -2191,31 +2191,35 @@\n             \n-return \n+console.log\n (%60Cost: $%7Bth\n@@ -2279,16 +2279,23 @@\n         \n+return;\n %0A       \n@@ -2304,23 +2304,28 @@\n %0A       \n-return \n+ console.log\n (%60Cost: \n"
+        },
+        {
+            "label": "2024-12-05_17-51-39",
+            "content": "@@ -485,32 +485,62 @@\n     constructor(\n+nome: string, dinheiro: number\n )%7B%0A        this.\n@@ -539,24 +539,31 @@\n    this.nome\n+ = nome\n ;%0A        th\n@@ -565,32 +565,43 @@\n    this.dinheiro\n+ = dinheiro\n ;%0A    %7D%0A    setN\n@@ -2519,44 +2519,8 @@\n ();%0A\n-        this.pessoa = new Pessoa();%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_17-52-32",
+            "content": "@@ -2394,16 +2394,36 @@\n o: Moto;\n+%0A    pessoa: Pessoa;\n %0A%0A    co\n@@ -2463,24 +2463,60 @@\n new Moto();%0A\n+        this.pessoa = new Pessoa();%0A\n     %7D%0A    se\n"
+        },
+        {
+            "label": "2024-12-05_17-57-08",
+            "content": "@@ -2415,25 +2415,16 @@\n ctor()%7B%0A\n-        %0A\n         \n"
+        },
+        {
+            "label": "2024-12-05_17-57-22",
+            "content": "@@ -2411,24 +2411,32 @@\n structor()%7B%0A\n+        \n %0A        thi\n@@ -2465,33 +2465,30 @@\n    %7D%0A    set\n-Motorista\n+Driver\n (nome: strin\n@@ -2574,38 +2574,37 @@\n   %7D%0A%0A    setPass\n-ageiro\n+enger\n (nome: string, d\n"
+        },
+        {
+            "label": "2024-12-05_17-58-12",
+            "content": "@@ -2415,24 +2415,16 @@\n ctor()%7B%0A\n-        \n %0A       \n@@ -2461,22 +2461,25 @@\n %0A    set\n-Driver\n+Motorista\n (nome: s\n@@ -2577,21 +2577,22 @@\n  setPass\n-enger\n+ageiro\n (nome: s\n"
+        },
+        {
+            "label": "2024-12-05_17-58-23",
+            "content": "@@ -2002,24 +2002,57 @@\n %0A        %7D%0A%0A\n+        this.custo += distancia;%0A\n     %7D%0A%0A    l\n"
+        },
+        {
+            "label": "2024-12-05_18-00-25",
+            "content": "@@ -2706,21 +2706,24 @@\n is.moto.\n-drive\n+setCusto\n (distanc\n"
+        },
+        {
+            "label": "2024-12-05_18-01-06",
+            "content": "@@ -2010,41 +2010,8 @@\n  %7D%0A%0A\n-        this.custo += distancia;%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_18-01-24",
+            "content": "@@ -2019,25 +2019,25 @@\n    this.\n-setCusto(\n+custo += \n distanci\n@@ -2029,33 +2029,32 @@\n sto += distancia\n-)\n ;%0A    %7D%0A%0A    lea\n"
+        },
+        {
+            "label": "2024-12-05_18-04-09",
+            "content": "@@ -2408,32 +2408,41 @@\n  constructor()%7B%0A\n+        %0A\n         this.mot\n"
+        },
+        {
+            "label": "2024-12-05_22-09-35",
+            "content": "@@ -3710,8 +3710,9 @@\n %0Amain();\n+%0A\n"
+        },
+        {
+            "label": "2024-12-05_22-23-56",
+            "content": "@@ -1738,36 +1738,16 @@\n oney%22);%0A\n-            return;%0A\n         \n@@ -2138,17 +2138,16 @@\n  null)%7B%0A\n-%0A\n         \n"
+        },
+        {
+            "label": "2024-12-05_22-57-43",
+            "content": "@@ -1887,32 +1887,163 @@\n turn;%0A        %7D%0A\n+        if(this.passageiro == null)%7B%0A           // console.log(%22Fail: N%C3%A3o tem passageiro na moto%22);%0A            return;%0A        %7D%0A%0A\n         this.set\n"
+        },
+        {
+            "label": "2024-12-05_22-58-31",
+            "content": "@@ -497,38 +497,8 @@\n tor(\n-nome: string, dinheiro: number\n )%7B%0A \n@@ -2545,20 +2545,8 @@\n eiro\n- (new Pessoa\n (nom\n@@ -2557,17 +2557,16 @@\n inheiro)\n-)\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-05_23-07-10",
+            "content": "@@ -1079,22 +1079,40 @@\n a(nome: \n-Pessoa\n+string, dinheiro: number\n )%7B%0A     \n@@ -1132,21 +1132,72 @@\n ista\n- = nome;%0A    \n+?.setNome(nome); %0A        this.motorista?.setDinheiro(dinheiro);\n %0A   \n@@ -2462,20 +2462,8 @@\n ista\n-(new Pessoa \n (nom\n@@ -2474,17 +2474,16 @@\n inheiro)\n-)\n ;%0A    %7D%0A\n@@ -2567,24 +2567,36 @@\n etPassageiro\n+ (new Pessoa\n (nome, dinhe\n@@ -2591,32 +2591,33 @@\n (nome, dinheiro)\n+)\n ;%0A    %7D%0A%0A    dri\n"
+        },
+        {
+            "label": "2024-12-05_23-12-36",
+            "content": "@@ -1073,21 +1073,20 @@\n torista(\n-valor\n+nome\n : Pessoa\n@@ -1115,16 +1115,14 @@\n sta \n- \n = \n-valor\n+nome\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-05_23-19-36",
+            "content": "@@ -1155,55 +1155,127 @@\n iro(\n-valor: Pessoa)%7B%0A        this.passageiro = valor\n+nome: string, dinheiro: number)%7B%0A        this.passageiro?.setNome(nome);%0A        this.passageiro?.setDinheiro(dinheiro)\n ;%0A  \n@@ -2523,19 +2523,8 @@\n iro(\n-new Pessoa(\n nome\n@@ -2526,33 +2526,32 @@\n (nome, dinheiro)\n-)\n ;%0A    %7D%0A%0A    dri\n"
+        },
+        {
+            "label": "2024-12-05_23-21-01",
+            "content": "@@ -1848,24 +1848,25 @@\n s()%7B%0A%0A    %7D%0A\n+%0A\n     toString\n@@ -1999,16 +1999,27 @@\n  None%60);\n+%0A          \n   %0A     \n"
+        },
+        {
+            "label": "2024-12-05_23-26-01",
+            "content": "@@ -2086,19 +2086,8 @@\n ta()\n-?.getNome()\n %7D, P\n"
+        },
+        {
+            "label": "2024-12-05_23-26-31",
+            "content": "@@ -2087,24 +2087,20 @@\n a()?.get\n-Dinheiro\n+Nome\n ()%7D, Pas\n"
+        },
+        {
+            "label": "2024-12-05_23-27-14",
+            "content": "@@ -2082,16 +2082,31 @@\n orista()\n+?.getDinheiro()\n %7D, Passe\n"
+        },
+        {
+            "label": "2024-12-05_23-27-28",
+            "content": "@@ -2067,17 +2067,16 @@\n : $%7Bthis\n-?\n .getMoto\n"
+        },
+        {
+            "label": "2024-12-05_23-27-43",
+            "content": "@@ -827,88 +827,8 @@\n  %7D%0A%0A\n-    toString(): string%7B%0A%0A        return %60$%7Bthis.nome%7D:$%7Bthis.dinheiro%7D%60;%0A    %7D%0A%0A\n %7D%0A%0Ac\n@@ -2063,24 +2063,25 @@\n iver: $%7Bthis\n+?\n .getMotorist\n@@ -2087,20 +2087,8 @@\n ta()\n-?.toString()\n %7D, P\n@@ -2133,16 +2133,17 @@\n   %7D%0A%7D%0A%0A%0A\n+%0A\n class Ad\n"
+        },
+        {
+            "label": "2024-12-05_23-31-40",
+            "content": "@@ -2162,16 +2162,28 @@\n orista()\n+?.toString()\n %7D, Passe\n"
+        },
+        {
+            "label": "2024-12-05_23-32-26",
+            "content": "@@ -839,32 +839,33 @@\n ring(): string%7B%0A\n+%0A\n         return %60\n"
+        },
+        {
+            "label": "2024-12-05_23-35-35",
+            "content": "@@ -547,15 +547,8 @@\n nome\n- = nome\n ;%0A  \n@@ -570,19 +570,8 @@\n eiro\n- = dinheiro\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-05_23-36-24",
+            "content": "@@ -2112,161 +2112,8 @@\n   %7D%0A\n-        if(this.getPassageiro() == null)%7B%0A%0A            return (%60Cost: $%7Bthis.getCusto()%7D, Driver: $%7Bthis.getMotorista()%7D, Passenger: None%60);  %0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_23-37-37",
+            "content": "@@ -2344,17 +2344,16 @@\n assenger\n-:\n  $%7Bthis.\n"
+        },
+        {
+            "label": "2024-12-05_23-38-01",
+            "content": "@@ -707,17 +707,16 @@\n inheiro \n--\n = value;\n@@ -1946,59 +1946,8 @@\n ()%7B%0A\n-        this.passageiro?.setDinheiro(- this.custo);\n %0A   \n"
+        },
+        {
+            "label": "2024-12-05_23-47-10",
+            "content": "@@ -1980,16 +1980,18 @@\n inheiro(\n+- \n this.cus\n"
+        },
+        {
+            "label": "2024-12-05_23-47-28",
+            "content": "@@ -703,24 +703,25 @@\n is.dinheiro \n+-\n = value;%0A   \n@@ -1984,11 +1984,8 @@\n iro(\n- - \n this\n@@ -1997,17 +1997,8 @@\n o);%0A\n-        %0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_23-52-43",
+            "content": "@@ -1942,35 +1942,32 @@\n Pass()%7B%0A        \n-if(\n this.passageiro?\n@@ -1971,126 +1971,22 @@\n ro?.\n-getDinheiro != null)%7B%0A            let dinheiroP = this.passageiro?.getDinheiro();%0A            console.log(dinheiroP\n+setDinheiro(\n  -\n-=\n  thi\n@@ -1999,27 +1999,8 @@\n o);%0A\n-        %7D%0A        %0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_23-56-53",
+            "content": "@@ -2106,55 +2106,8 @@\n o);%0A\n-        %7Delse%7B%0A            console.log(%22ola%22);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_23-57-25",
+            "content": "@@ -3068,56 +3068,8 @@\n d %7B%0A\n-        console.log(this.moto.getPassageiro());%0A\n     \n"
+        },
+        {
+            "label": "2024-12-05_23-58-24",
+            "content": "@@ -3064,32 +3064,44 @@\n  void %7B%0A        \n+console.log(\n this.moto.getPas\n@@ -3105,24 +3105,25 @@\n Passageiro()\n+)\n ;%0A    %7D%0A%0A   \n"
+        },
+        {
+            "label": "2024-12-06_00-00-01",
+            "content": "@@ -3071,28 +3071,16 @@\n %0A       \n-console.log(\n  this.mo\n@@ -3097,17 +3097,16 @@\n ageiro()\n-)\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-06_00-00-36",
+            "content": "@@ -1938,24 +1938,241 @@\n eavePass()%7B%0A\n+        if(this.passageiro?.getDinheiro != null)%7B%0A            let dinheiroP = this.passageiro?.getDinheiro();%0A            console.log(dinheiroP -= this.custo);%0A        %7Delse%7B%0A            console.log(%22ola%22);%0A        %7D%0A\n         %0A   \n"
+        },
+        {
+            "label": "2024-12-06_00-02-00",
+            "content": "@@ -2858,32 +2858,33 @@\n     console.log(\n+ \n this.moto.getPas\n@@ -2896,19 +2896,8 @@\n ro()\n-  + %22leave%22\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_00-02-54",
+            "content": "@@ -2899,11 +2899,9 @@\n   + \n- %22 \n+%22\n leav\n"
+        },
+        {
+            "label": "2024-12-06_00-03-15",
+            "content": "@@ -1954,25 +1954,17 @@\n     \n-console.log(%22Oi%22)\n+%0A        \n %0A   \n"
+        },
+        {
+            "label": "2024-12-06_00-04-10",
+            "content": "@@ -1942,25 +1942,24 @@\n Pass()%7B%0A\n-%0A\n         \n %0A    %7D%0A \n@@ -1946,24 +1946,41 @@\n ()%7B%0A        \n+console.log(%22Oi%22)\n %0A    %7D%0A    t\n@@ -2884,27 +2884,44 @@\n is.moto.\n-leavePass()\n+getPassageiro()  +  %22 leave%22\n );%0A    %7D\n"
+        },
+        {
+            "label": "2024-12-06_00-05-18",
+            "content": "@@ -1942,24 +1942,25 @@\n Pass()%7B%0A\n+%0A\n         \n console.\n@@ -1955,42 +1955,8 @@\n     \n-console.log(this.getPassageiro());\n %0A   \n"
+        },
+        {
+            "label": "2024-12-06_00-06-13",
+            "content": "@@ -1986,19 +1986,8 @@\n ro()\n- + %22 leave%22\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_00-06-29",
+            "content": "@@ -474,23 +474,16 @@\n : number\n- %7C null\n ;%0A%0A    c\n@@ -802,23 +802,16 @@\n : number\n- %7C null\n %7B%0A      \n@@ -1946,110 +1946,8 @@\n ()%7B%0A\n-        let dinheiroP: number = this.passageiro?.getDinheiro();%0A        dinheiroP -= this.getCusto();%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_00-09-52",
+            "content": "@@ -481,20 +481,16 @@\n r %7C null\n- = 0\n ;%0A%0A    c\n@@ -1990,15 +1990,8 @@\n ber \n-%7C null \n = th\n"
+        },
+        {
+            "label": "2024-12-06_00-10-38",
+            "content": "@@ -474,16 +474,27 @@\n : number\n+ %7C null = 0\n ;%0A%0A    c\n@@ -805,32 +805,39 @@\n nheiro(): number\n+ %7C null\n %7B%0A        return\n@@ -1990,16 +1990,23 @@\n  number \n+%7C null \n = this.p\n"
+        },
+        {
+            "label": "2024-12-06_00-11-19",
+            "content": "@@ -572,25 +572,32 @@\n .dinheiro = \n-0\n+dinheiro\n ;%0A    %7D%0A    \n"
+        },
+        {
+            "label": "2024-12-06_00-11-47",
+            "content": "@@ -576,24 +576,17 @@\n heiro = \n-dinheiro\n+0\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-06_00-11-54",
+            "content": "@@ -1938,24 +1938,126 @@\n eavePass()%7B%0A\n+        let dinheiroP: number = this.passageiro?.getDinheiro();%0A        dinheiroP -= this.getCusto();%0A\n         cons\n"
+        },
+        {
+            "label": "2024-12-06_00-13-38",
+            "content": "@@ -2886,24 +2886,36 @@\n id %7B%0A       \n+console.log(\n this.moto.le\n@@ -2923,16 +2923,17 @@\n vePass()\n+)\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-06_00-15-42",
+            "content": "@@ -1946,58 +1946,8 @@\n ()%7B%0A\n-        this.passageiro?.setDinheiro(this.custo);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-14-13",
+            "content": "@@ -2050,34 +2050,8 @@\n %22);%0A\n-        this.setCusto(0);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-15-06",
+            "content": "@@ -2050,57 +2050,8 @@\n %22);%0A\n-        this.motorista?.setDinheiro(this.custo);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-16-15",
+            "content": "@@ -2082,19 +2082,16 @@\n inheiro(\n- + \n this.cus\n"
+        },
+        {
+            "label": "2024-12-06_01-16-35",
+            "content": "@@ -2074,32 +2074,35 @@\n ta?.setDinheiro(\n+ + \n this.custo);%0A   \n"
+        },
+        {
+            "label": "2024-12-06_01-16-45",
+            "content": "@@ -707,17 +707,16 @@\n inheiro \n-+\n = value;\n"
+        },
+        {
+            "label": "2024-12-06_01-17-51",
+            "content": "@@ -1980,17 +1980,16 @@\n inheiro(\n--\n this.cus\n"
+        },
+        {
+            "label": "2024-12-06_01-18-18",
+            "content": "@@ -2127,46 +2127,8 @@\n 0);%0A\n-        this.passageiro?.setNome(%22%22);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-20-27",
+            "content": "@@ -2138,39 +2138,45 @@\n  this.passageiro\n- = null\n+?.setNome(%22%22)\n ;%0A    %7D%0A    toSt\n"
+        },
+        {
+            "label": "2024-12-06_01-21-02",
+            "content": "@@ -1898,24 +1898,25 @@\n    this.\n-c\n+setC\n usto\n- = \n+(\n distanci\n@@ -1916,16 +1916,17 @@\n istancia\n+)\n ;%0A    %7D%0A\n"
+        },
+        {
+            "label": "2024-12-06_01-22-33",
+            "content": "@@ -2157,34 +2157,8 @@\n ll;%0A\n-        this.setCusto(0);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-23-27",
+            "content": "@@ -2179,9 +2179,8 @@\n sto(\n-3\n 0);%0A\n"
+        },
+        {
+            "label": "2024-12-06_01-23-36",
+            "content": "@@ -2149,24 +2149,51 @@\n iro = null;%0A\n+        this.setCusto(30);%0A\n     %7D%0A    to\n"
+        },
+        {
+            "label": "2024-12-06_01-23-47",
+            "content": "@@ -1354,17 +1354,16 @@\n custo = \n-+\n custo;%0A \n"
+        },
+        {
+            "label": "2024-12-06_01-29-30",
+            "content": "@@ -1352,19 +1352,19 @@\n s.custo \n-+\n = \n++\n custo;%0A \n"
+        },
+        {
+            "label": "2024-12-06_01-29-53",
+            "content": "@@ -1345,80 +1345,8 @@\n     \n-if(this.custo != 0)%7B%0A            this.custo += custo;%0A        %7D%0A        \n this\n@@ -1352,16 +1352,17 @@\n s.custo \n++\n = custo;\n"
+        },
+        {
+            "label": "2024-12-06_01-31-47",
+            "content": "@@ -1395,36 +1395,16 @@\n  custo;%0A\n-            return;%0A\n         \n"
+        },
+        {
+            "label": "2024-12-06_01-32-10",
+            "content": "@@ -1325,32 +1325,124 @@\n custo: number)%7B%0A\n+        if(this.custo != 0)%7B%0A            this.custo += custo;%0A            return;%0A        %7D%0A\n         this.cus\n"
+        },
+        {
+            "label": "2024-12-06_01-32-32",
+            "content": "@@ -2121,26 +2121,9 @@\n sto(\n- - this.getCusto()\n+0\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_01-39-03",
+            "content": "@@ -2117,17 +2117,34 @@\n etCusto(\n-0\n+ - this.getCusto()\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-06_01-39-12",
+            "content": "@@ -1352,17 +1352,16 @@\n s.custo \n-+\n = custo;\n@@ -1984,26 +1984,21 @@\n o(-this.\n-getC\n+c\n usto\n-()\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-06_01-40-02",
+            "content": "@@ -2089,34 +2089,29 @@\n nheiro(this.\n-getC\n+c\n usto\n-()\n );%0A        t\n@@ -2127,26 +2127,9 @@\n sto(\n- - this.getCusto()\n+0\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_01-42-21",
+            "content": "@@ -1262,23 +1262,16 @@\n : Pessoa\n- %7C null\n )%7B%0A     \n@@ -2162,20 +2162,17 @@\n    this.\n-setP\n+p\n assageir\n@@ -2176,14 +2176,15 @@\n eiro\n-(\n+ = \n null\n-)\n ;%0A  \n"
+        },
+        {
+            "label": "2024-12-06_01-43-25",
+            "content": "@@ -2017,105 +2017,105 @@\n     \n-this.motorista?.setDinheiro(this.getCusto());%0A        console.log(this.getPassageiro() + %22 leave%22\n+console.log(this.getPassageiro() + %22 leave%22);%0A        this.motorista?.setDinheiro(this.getCusto()\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_01-49-00",
+            "content": "@@ -1646,9 +1646,9 @@\n eiro\n-!\n+?\n .get\n@@ -1662,9 +1662,9 @@\n o() \n-%3C\n+=\n = 0)\n"
+        },
+        {
+            "label": "2024-12-06_01-52-41",
+            "content": "@@ -1906,25 +1906,24 @@\n    this.\n-setC\n+c\n usto\n-(\n+ = \n distanci\n@@ -1915,33 +1915,32 @@\n usto = distancia\n-)\n ;%0A    %7D%0A%0A    lea\n"
+        },
+        {
+            "label": "2024-12-06_01-53-33",
+            "content": "@@ -1669,53 +1669,8 @@\n 0)%7B%0A\n-            this.passageiro?.setDinheiro(0);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-55-18",
+            "content": "@@ -1710,38 +1710,9 @@\n iro(\n-+this.passageiro.getDinheiro()\n+0\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_01-56-22",
+            "content": "@@ -474,23 +474,16 @@\n : number\n- %7C null\n ;%0A%0A    c\n@@ -1702,28 +1702,54 @@\n setDinheiro(\n-null\n++this.passageiro.getDinheiro()\n );%0A         \n"
+        },
+        {
+            "label": "2024-12-06_01-57-07",
+            "content": "@@ -474,16 +474,23 @@\n : number\n+ %7C null\n ;%0A%0A    c\n@@ -696,81 +696,8 @@\n r)%7B%0A\n-        if(this.dinheiro %3C= 0)%7B%0A            this.dinheiro = 0;%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_01-58-01",
+            "content": "@@ -677,32 +677,105 @@\n value: number)%7B%0A\n+        if(this.dinheiro %3C= 0)%7B%0A            this.dinheiro = 0;%0A        %7D%0A\n         this.din\n"
+        },
+        {
+            "label": "2024-12-06_01-58-23",
+            "content": "@@ -1706,17 +1706,20 @@\n inheiro(\n-0\n+null\n );%0A     \n"
+        },
+        {
+            "label": "2024-12-06_02-00-25",
+            "content": "@@ -1710,42 +1710,9 @@\n iro(\n-this.passageiro.getDinheiro() * -1\n+0\n );%0A \n"
+        },
+        {
+            "label": "2024-12-06_02-00-55",
+            "content": "@@ -1662,15 +1662,93 @@\n o() \n-=\n+%3C\n = 0)%7B%0A\n+            this.passageiro?.setDinheiro(this.passageiro.getDinheiro() * -1);%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_02-01-27",
+            "content": "@@ -1669,39 +1669,8 @@\n 0)%7B%0A\n-            console.log(%22oi%22);%0A\n     \n@@ -1794,32 +1794,93 @@\n rista == null)%7B%0A\n+            //console.log(%22Fail: A moto n%C3%A3o tem motorista%22);%0A\n             retu\n"
+        },
+        {
+            "label": "2024-12-06_02-03-40",
+            "content": "@@ -1642,17 +1642,17 @@\n ssageiro\n-?\n+!\n .getDinh\n"
+        },
+        {
+            "label": "2024-12-06_02-03-58",
+            "content": "@@ -1662,65 +1662,9 @@\n o() \n-!= null)%7B%0A            if(this.passageiro?.getDinheiro() %3C\n+=\n = 0)\n@@ -1669,36 +1669,32 @@\n 0)%7B%0A            \n-  \n-  \n console.log(%22oi%22\n@@ -1692,28 +1692,24 @@\n .log(%22oi%22);%0A\n-    \n             \n@@ -1771,36 +1771,32 @@\n %22);%0A            \n-    \n return;%0A        \n@@ -1787,36 +1787,32 @@\n return;%0A        \n-    \n %7D%0A            if\n@@ -1801,28 +1801,24 @@\n   %7D%0A        \n- \n-   \n if(this.moto\n@@ -1837,36 +1837,32 @@\n l)%7B%0A            \n-    \n return;%0A        \n@@ -1865,25 +1865,18 @@\n     \n-    %7D%0A   \n+%7D%0A\n         \n  thi\n@@ -1867,25 +1867,24 @@\n   %7D%0A        \n- \n this.setCust\n@@ -1901,36 +1901,8 @@\n a);%0A\n-        %7D%0A        %0A        %0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_02-05-53",
+            "content": "@@ -1721,16 +1721,51 @@\n  %3C= 0)%7B%0A\n+                console.log(%22oi%22);%0A\n         \n"
+        },
+        {
+            "label": "2024-12-06_02-06-27",
+            "content": "@@ -1646,9 +1646,9 @@\n eiro\n-!\n+?\n .get\n@@ -1662,12 +1662,15 @@\n o() \n-%3C= 0\n+!= null\n )%7B%0A \n@@ -1684,27 +1684,50 @@\n     \n-console.log(%22oi%22);%0A\n+if(this.passageiro?.getDinheiro() %3C= 0)%7B%0A \n     \n@@ -1726,32 +1726,35 @@\n )%7B%0A             \n+   \n console.log(%22fai\n@@ -1800,32 +1800,36 @@\n %22);%0A            \n+    \n return;%0A        \n@@ -1824,34 +1824,41 @@\n rn;%0A        \n-%7D%0A\n+    %7D%0A   \n         \n if(this.moto\n@@ -1837,32 +1837,33 @@\n    %7D%0A           \n+ \n if(this.motorist\n@@ -1878,32 +1878,36 @@\n l)%7B%0A            \n+    \n return;%0A        \n@@ -1898,34 +1898,42 @@\n return;%0A        \n-%7D%0A\n+    %7D%0A    \n         this.set\n@@ -1942,32 +1942,60 @@\n sto(distancia);%0A\n+        %7D%0A        %0A        %0A\n     %7D%0A%0A    leave\n"
+        },
+        {
+            "label": "2024-12-06_02-07-08",
+            "content": "@@ -1619,24 +1619,297 @@\n oid%7B%0A       \n+ if(this.passageiro!.getDinheiro() %3C= 0)%7B%0A            console.log(%22oi%22);%0A            console.log(%22fail: Passenger does not have enough money%22);%0A            return;%0A        %7D%0A        if(this.motorista == null)%7B%0A            return;%0A        %7D%0A        this.setCusto(distancia);\n %0A    %7D%0A%0A    \n"
+        },
+        {
+            "label": "2024-12-06_02-07-25",
+            "content": "@@ -1627,34 +1627,8 @@\n     \n- this.setCusto(distancia);\n %0A   \n"
+        },
+        {
+            "label": "2024-12-06_02-07-39",
+            "content": "@@ -1620,111 +1620,8 @@\n id%7B%0A\n-        if(this.passageiro?.getDinheiro() == 0)%7B%0A            this.passageiro.setDinheiro(0);%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_02-08-46",
+            "content": "@@ -703,24 +703,25 @@\n is.dinheiro \n++\n = value;%0A   \n"
+        },
+        {
+            "label": "2024-12-06_02-09-00",
+            "content": "@@ -1817,26 +1817,9 @@\n iro(\n-this.getCusto() - \n+-\n this\n"
+        },
+        {
+            "label": "2024-12-06_02-10-45",
+            "content": "@@ -707,17 +707,16 @@\n inheiro \n-+\n = value;\n@@ -1813,17 +1813,34 @@\n inheiro(\n--\n+this.getCusto() - \n this.get\n"
+        },
+        {
+            "label": "2024-12-06_02-10-51",
+            "content": "@@ -689,100 +689,8 @@\n r)%7B%0A\n-        if(this.dinheiro %3C= 0)%7B%0A            this.dinheiro =0;%0A            return;%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_02-18-32",
+            "content": "@@ -748,10 +748,8 @@\n ro =\n- 1\n 0;%0A \n"
+        },
+        {
+            "label": "2024-12-06_02-18-42",
+            "content": "@@ -677,32 +677,126 @@\n value: number)%7B%0A\n+        if(this.dinheiro %3C= 0)%7B%0A            this.dinheiro = 10;%0A            return;%0A        %7D%0A\n         this.din\n@@ -1875,134 +1875,8 @@\n ()%7B%0A\n-        if(this.passageiro!.getDinheiro() %3C this.getCusto())%7B%0A            this.passageiro?.setDinheiro(0);%0A        %7Delse%7B%0A    \n     \n@@ -1927,26 +1927,16 @@\n sto());%0A\n-        %7D%0A\n         \n"
+        },
+        {
+            "label": "2024-12-06_02-21-18",
+            "content": "@@ -1709,46 +1709,12 @@\n iro(\n-this.passageiro.getDinheiro() * -1\n+0\n );%0A\n-%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_02-25-39",
+            "content": "@@ -1620,24 +1620,152 @@\n id%7B%0A        \n+if(this.passageiro?.getDinheiro() == 0)%7B%0A            this.passageiro.setDinheiro(this.passageiro.getDinheiro() * -1);%0A%0A        %7D\n %0A        thi\n"
+        },
+        {
+            "label": "2024-12-06_02-35-15",
+            "content": "@@ -689,81 +689,8 @@\n r)%7B%0A\n-        if(this.dinheiro %3C= 0)%7B%0A            this.dinheiro = 0;%0A        %7D%0A\n     \n"
+        },
+        {
+            "label": "2024-12-06_02-37-08",
+            "content": "@@ -1660,89 +1660,107 @@\n     \n-public leavePass(): void%7B%0A        this.passageiro?.setDinheiro(-this.getCusto());\n+drive(distancia : number): void%7B%0A        %0A        this.setCusto(distancia);%0A    %7D%0A%0A    leavePass()%7B\n %0A   \n@@ -1758,33 +1758,32 @@\n ss()%7B%0A        if\n- \n (this.passageiro\n@@ -1782,17 +1782,17 @@\n ssageiro\n-?\n+!\n .getDinh\n@@ -1802,16 +1802,25 @@\n o() \n-!= null \n+%3C this.getCusto()\n )%7B%0A \n@@ -1830,20 +1830,16 @@\n         \n-if (\n this.pas\n@@ -1845,18 +1845,19 @@\n ssageiro\n-.g\n+?.s\n etDinhei\n@@ -1863,16 +1863,11 @@\n iro(\n-) %3C= \n 0)\n-%7B\n+;\n %0A   \n@@ -1875,79 +1875,15 @@\n     \n-        console.log(%22fail: Passenger does not have enough money%22);%0A    \n+%7Delse%7B%0A\n     \n@@ -1923,25 +1923,26 @@\n iro(\n-0);%0A            %7D\n+-this.getCusto());\n %0A   \n@@ -2078,17 +2078,19 @@\n etCusto(\n--\n+ - \n this.get\n@@ -2142,93 +2142,8 @@\n    %7D\n-%0A%0A    public drive(distancia: number): void%7B%0A%0A        this.setCusto(distancia);%0A%C2%A0%C2%A0%C2%A0%C2%A0%7D\n %0A   \n"
+        },
+        {
+            "label": "2024-12-06_02-40-02",
+            "content": "@@ -1257,22 +1257,16 @@\n : Pessoa\n-%7C null\n )%7B%0A     \n"
+        },
+        {
+            "label": "2024-12-06_15-31-40",
+            "content": "import { timeStamp } from \"console\";\n\nfunction input(): string { let X: any = input; X.L = X.L || require(\"fs\").readFileSync(0).toString().split(/\\r?\\n/); return X.L.shift(); } // _TEST_ONLY_\n//function input(): string { let X: any = input; X.P = X.P || require(\"readline-sync\"); return X.P.question() } // _FREE_ONLY_\nfunction write(text: any, endl=\"\\n\") { process.stdout.write(\"\" + text + endl); }\nexport {};\n\n\nclass Pessoa{\n    private nome: string;\n    private dinheiro: number;\n\n    constructor(nome: string, dinheiro: number){\n        this.nome = nome;\n        this.dinheiro = dinheiro;\n    }\n    setNome(value: string){\n        this.nome = value;\n    }\n    setDinheiro(value: number){\n        if(this.dinheiro <= 0){\n            this.dinheiro = 0;\n        }\n        this.dinheiro += value;\n    }\n    getNome(): string{\n        return this.nome;\n    }\n    getDinheiro(): number{\n        return this.dinheiro;\n    }\n\n    toString(): string{\n        return `${this.nome}:${this.dinheiro}`;\n    }\n\n}\n\nclass Moto{\n    private custo: number;\n    private motorista: Pessoa | null;\n    private passageiro: Pessoa | null;\n\n    constructor(){\n        this.custo = 0;\n        this.motorista = null;\n        this.passageiro = null;\n    }\n\n    setMotorista(valor: Pessoa| null){\n        this.motorista  = valor;\n    \n    }\n    setPassageiro(valor: Pessoa | null){\n        this.passageiro = valor;\n    }\n    setCusto(custo: number){\n        this.custo += custo;\n    }\n    getMotorista(): Pessoa | null{\n        return this.motorista;\n    }\n    getPassageiro(): Pessoa | null{\n        return this.passageiro;\n    }\n    getCusto(): number{\n        return this.custo;\n    }\n\n    public leavePass(): void{\n        this.passageiro?.setDinheiro(-this.getCusto());\n        if (this.passageiro?.getDinheiro() != null ){\n            if (this.passageiro.getDinheiro() <= 0){\n                console.log(\"fail: Passenger does not have enough money\");\n                this.passageiro?.setDinheiro(0);\n            }\n        }\n        this.motorista?.setDinheiro(this.getCusto());\n        console.log(this.getPassageiro() + \" leave\");\n        this.setCusto(-this.getCusto());\n        this.setPassageiro(null);\n    }\n\n    public drive(distancia: number): void{\n\n        this.setCusto(distancia);\n\u00a0\u00a0\u00a0\u00a0}\n    toString(): string {\n        if(this.getMotorista() == null){\n\n            return (`Cost: ${this.getCusto()}, Driver: None, Passenger: None`);  \n        }\n        if(this.getPassageiro() == null){\n\n            return (`Cost: ${this.getCusto()}, Driver: ${this.getMotorista()}, Passenger: None`);  \n        }\n       return (`Cost: ${this.getCusto()}, Driver: ${this.getMotorista()}, Passenger: ${this.getPassageiro()}`);\n    }\n}\n\n\nclass Adapter {\n\n    moto: Moto;\n\n    constructor(){\n        this.moto = new Moto();\n    }\n    setDriver(nome: string, dinheiro: number): void {\n        this.moto.setMotorista(new Pessoa (nome, dinheiro));\n    }\n\n    setPassenger(nome: string, dinheiro: number): void {\n        this.moto.setPassageiro(new Pessoa(nome, dinheiro));\n    }\n\n    drive(distancia: number): void {\n        this.moto.drive(distancia);\n    }\n\n    leavePassenger(): void {\n       this.moto.leavePass();\n    }\n\n    show(): void {\n        console.log(this.moto.toString());\n    }\n}\n\nfunction main(): void {\n    let adapter: Adapter = new Adapter();\n    while (true) {\n        write(\"$\", \"\");\n        const line = input();\n        const args = line.split(\" \");\n        write(line);\n\n        if      (args[0] === \"end\"      ) { break;                                   }\n        else if (args[0] === \"setDriver\") { adapter.setDriver(args[1], +args[2]);    }\n        else if (args[0] === \"setPass\"  ) { adapter.setPassenger(args[1], +args[2]); }\n        else if (args[0] === \"drive\"    ) { adapter.drive(+args[1]);                 }\n        else if (args[0] === \"leavePass\") { adapter.leavePassenger();                }\n        else if (args[0] === \"show\"     ) { adapter.show();                          }\n        else                              { console.log(\"fail: command not found\");  }\n    }\n    \n}\n\nexport {Adapter};\nmain();"
+        }
+    ]
+}
